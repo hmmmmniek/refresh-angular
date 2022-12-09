@@ -1,0 +1,15 @@
+<div class="current-player">
+    Current player: {{currentPlayer}}
+</div>
+<div *ngIf="foundFullRowIndexes.length > 0" class="lose-message">
+    So selfish to play like that.. now you both lose.
+</div>
+<div *ngIf="foundFullRowIndexes.length === 0 && fieldFull" class="win-message">
+    Good job, nobody lost, so you both won.
+</div>
+<div class="row" *ngFor="let y of [0,1,2]">
+    <div class="box" *ngFor="let x of [0,1,2]" [ngClass]="getBoxClasses(x, y)" (click)="selected(x,y)"></div>
+</div>
+<app_button small (clicked)="resetGame()">
+    Reset
+</app_button>

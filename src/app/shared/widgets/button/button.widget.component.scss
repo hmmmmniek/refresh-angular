@@ -1,0 +1,27 @@
+:host {
+    pointer-events: none;
+}
+.wrapper {
+    pointer-events:all;
+    cursor: pointer;
+
+    font-family: 'Kadwa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 110px;
+
+    color: #1C1928;
+    display: inline-block
+}
+
+.round {
+    padding: 70px;
+    border-radius: 50%;
+}
+
+.wrapper.small {
+    padding: 20px;
+    font-size: 20px;
+    line-height: 20px;
+}

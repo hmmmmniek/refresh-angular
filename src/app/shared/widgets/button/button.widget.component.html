@@ -1,0 +1,5 @@
+<div class="wrapper round" [ngClass]="{'small': small}" #wrapper (click)="clicked.emit($event)">
+    <div>
+        <ng-content></ng-content>
+    </div>
+</div>

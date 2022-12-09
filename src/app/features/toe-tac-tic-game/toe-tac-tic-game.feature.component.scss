@@ -1,0 +1,99 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    position: relative;
+    padding-bottom: 150px;
+}
+.current-player {
+
+        font-family: 'Kadwa';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 39px;
+    
+        color: #FF006B;
+    
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    width: 100px;
+    height:100px;
+    margin: 3px;
+    background: #2c488d;
+    border-radius: 5px;
+}
+.box:not(.Circle):not(.Cross) {
+    cursor: pointer;
+}
+
+.box.Circle {
+    background: #313d5a;
+    position: relative;
+}
+.box.Circle::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-radius: 1000px;
+    border: 10px solid #FF006B;
+    left: calc(25% - 10px);
+    top: calc(25% - 10px);
+}
+.box.Cross {
+    background: #313d5a;
+    position: relative;
+}
+.box.Cross::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 75%;
+    background: #FF006B;
+    rotate: 45deg;
+    left: calc(50% - 5px);
+    top: calc(12.5%);
+}
+.box.Cross::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 75%;
+    background: #FF006B;
+    rotate: -45deg;
+    left: calc(50% - 5px);
+    top: calc(12.5%);
+}
+.box.full-row {
+    background: #00ffaf;
+}
+app_button {
+    margin-top: 20px;
+}
+.lose-message, .win-message {
+    font-family: 'Kadwa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 39px;
+
+    color: #FF006B;
+    position: absolute;
+    text-align: center;
+    top: 140px;
+    width: 400px;
+    left: calc(50% - 200px);
+    z-index: 2;
+    background: rgb(0 0 0 / 70%);
+    box-shadow: 0px 0px 40px 40px rgb(0 0 0 / 70%);
+}

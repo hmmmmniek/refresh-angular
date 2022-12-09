@@ -1,0 +1,79 @@
+.main {
+    background-color: #1C1928;
+}
+.title {
+
+    font-family: 'Kadwa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 110px;
+    /* or 92% */
+    padding: 70px;
+
+    color: #FF006B;
+    z-index: 1;
+    position: relative;
+    width: 335px;
+}
+
+.title:last-child {
+    margin-top: -100px;
+}
+img {
+    position: absolute;
+    width: 100vw;
+    margin-top: 70px;
+}
+.list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    padding: 0 70px 0 70px;
+}
+
+
+app_button {
+    margin-top: -100px;
+}
+
+@media only screen and (max-width: 1200px) {
+    app_button {
+        margin-top: -50px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    app_button {
+        margin-top: -20px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    app_button {
+        margin-top: 0px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    app_button {
+        margin-top: 20px;
+    }
+}
+app_button:nth-child(odd) {
+    display: flex;
+    flex-direction: row;
+}
+app_button:nth-child(even) {
+    display: flex;
+    flex-direction: row;
+}
+app_button:nth-child(odd)::before {
+    content: '';
+    display: inline-block;
+    flex-grow: 1;
+}
+app_button:nth-child(even)::after {
+    content: '';
+    display: inline-block;
+    flex-grow: 1;
+}

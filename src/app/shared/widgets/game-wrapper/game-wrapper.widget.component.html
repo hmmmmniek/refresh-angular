@@ -1,0 +1,19 @@
+<div class="main" *ngIf="{
+    isInGame: isInGame$ | async
+} as data">
+    <div class="header">
+        <div class="header__title">{{name}}</div>
+        <app_button (clicked)="goTo('../../')" color="#FF2E00">Go back</app_button>
+    </div>
+    <div class="menu">
+        <app_button *ngIf="data.isInGame" class="menu__how-to-play" (clicked)="goTo('../how-to-play')" color="#f200ff">How to play</app_button>
+        <app_button *ngIf="!data.isInGame" class="menu__play-game" (clicked)="goTo('../play-game')" color="#48ff00">Play game</app_button>
+
+    </div>
+    
+
+    <img src="assets/svg/background-swirl.svg">
+    <div class="content-wrapper">
+        <ng-content></ng-content>
+    </div>
+</div>

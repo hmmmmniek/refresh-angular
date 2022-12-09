@@ -1,0 +1,59 @@
+.main {
+    background-color: #1C1928;
+    min-height: 100vh;
+}
+.header {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.header__title {
+
+    font-family: 'Kadwa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 120px;
+    line-height: 110px;
+    /* or 92% */
+    padding: 70px;
+
+    color: #FF006B;
+    z-index: 1;
+    position: relative;
+    width: 335px;
+    min-height: 250px;
+}
+.header app_button {
+    position: relative;
+    padding-top: 70px;
+}
+
+.menu {
+    margin-top: -100px;
+    padding: 0px 70px 0px 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+}
+.menu__how-to-play {
+    position: relative;
+    
+}
+
+img {
+    position: absolute;
+    width: 100vw;
+    margin-top: 70px;
+    top: 0px;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    padding: 0px 70px 0px 70px;
+}
